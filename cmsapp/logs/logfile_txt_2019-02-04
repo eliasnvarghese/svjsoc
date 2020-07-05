@@ -1,0 +1,320 @@
+DebugLog  | 2019-02-04 01:08:06 | guest | 66.220.149.30 | calendar | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 1
+DebugLog  | 2019-02-04 01:10:57 | guest | 66.220.149.23 | calendar | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 1
+DebugLog  | 2019-02-04 01:19:06 | guest | 66.220.149.26 | calendar | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 1
+DebugLog  | 2019-02-04 01:23:35 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 01:23:35 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 01:28:09 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 01:28:09 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 01:28:48 | guest | 24.6.79.223 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 01:28:48 | guest | 24.6.79.223 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 01:30:23 | guest | 73.170.38.236 | login_action | adminAuthenticate: select a.uid,a.userid,a.username,a.firstname,a.lastname,a.passwd,a.saltkey,a.sessionid, a.activated,a.activationdata,a.activatedon,a.photopath  from admin_user_details_t a  where a.userid ='ginojohn@gmail.com'  limit 1
+DebugLog  | 2019-02-04 01:30:23 | guest | 73.170.38.236 | login_action | got data...pOO66Zqpp2s=
+DebugLog  | 2019-02-04 01:30:23 | guest | 73.170.38.236 | login_action | encrypted pass true
+DebugLog  | 2019-02-04 01:30:23 | guest | 73.170.38.236 | login_action | Authenticate ====1
+DebugLog  | 2019-02-04 01:30:23 | guest | 73.170.38.236 | login_action | removeAllLoginActivity: delete  from admin_loginactivity where userid='ginojohn@gmail.com'
+DebugLog  | 2019-02-04 01:30:23 | guest | 73.170.38.236 | login_action | addLoginActivity: insert into admin_loginactivity(userid,logintime,lastupdate,ipaddress,hashkey,sessionid)values('ginojohn@gmail.com','2019-02-04 01:30:23','2019-02-04 01:30:23','73.170.38.236','c4c07b88493f8da84802bcd2a7de351a','85f7df0426db1521fd80e1640357497c')
+DebugLog  | 2019-02-04 01:30:23 | ginojohn@gmail.com | 73.170.38.236 | login_action | aaaaaaaaaaaa
+DebugLog  | 2019-02-04 01:30:23 | ginojohn@gmail.com | 73.170.38.236 | dashboard | User Logged In
+DebugLog  | 2019-02-04 01:30:23 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getTotalRegSummary: select count(a.uid) as cnt from userregistration_t a where a.deleted = 0 
+DebugLog  | 2019-02-04 01:30:23 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getThisMonthRegSummary: select count(a.uid) as cnt from userregistration_t a where month(a.createdon) = '02' and year(a.createdon) = '2019' and a.deleted = 0 
+DebugLog  | 2019-02-04 01:30:23 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getTodaysRegSummary: select count(a.uid) as cnt from userregistration_t a where  day(a.createdon)='04' and month(a.createdon)='02' and year(a.createdon)='2019' and a.deleted = 0 
+DebugLog  | 2019-02-04 01:30:23 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getTotalMesgSummary: select count(a.touid) as cnt from messages_t a where toaddress='churchteam'
+DebugLog  | 2019-02-04 01:30:23 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getThisMonthMesgSummary: select count(a.touid) as cnt from messages_t a where month(a.createdon) = '02' and year(a.createdon) = '2019' and toaddress='churchteam'
+DebugLog  | 2019-02-04 01:30:23 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getTodaysMesgSummary: select count(a.touid) as cnt from messages_t a where  day(a.createdon)='04' and month(a.createdon)='02' and year(a.createdon)='2019' and toaddress='churchteam'
+DebugLog  | 2019-02-04 01:30:23 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getTotalEvntSummary: select count(a.eventid) as cnt from events_t a where deleted = 0
+DebugLog  | 2019-02-04 01:30:23 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getThisMonthEvntSummary: select count(a.eventid) as cnt from events_t a where deleted = 0 and  month(a.fromdate) = '02' and year(a.fromdate) = '2019'
+DebugLog  | 2019-02-04 01:30:23 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getTodaysEvntSummary: select count(a.eventid) as cnt from events_t a where deleted = 0 and day(a.fromdate)='04' and month(a.fromdate)='02' and year(a.fromdate)='2019'
+DebugLog  | 2019-02-04 01:30:23 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getLatestRegUsers: select b.uid ,b.userid ,b.name ,b.familyname,b.gender ,b.dob ,b.maritalstatus,b.spousename,b.qualification ,b.fulladdress ,
+							b.zipcode ,b.city ,b.state ,b.mobilenumber ,b.phonenumber ,b.email ,b.photopath ,
+							b.aboutme ,b.aboutfamily ,b.completedstage ,b.lastlogintime ,b.deleted ,b.createdon ,b.createdby  from useraccount_t a,userregistration_t b  where  a.uid=b.uid and b.deleted=0  order by b.createdon desc limit 5
+UserLog | 2019-02-04 01:30:23 | ginojohn@gmail.com | 73.170.38.236 | dashboard | Query : select a.messageid,a.fromuid,a.fromaddress,a.touid,a.toaddress,a.subject,a.message,a.createdon,a.status,a.tag,b.uid,b.name  from  messages_t a, userregistration_t b where a.fromuid=b.uid  and a.toaddress = 'churchteam' order by a.createdon desc  LIMIT 0, 5
+DebugLog  | 2019-02-04 01:30:23 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 5
+DebugLog  | 2019-02-04 01:30:45 | ginojohn@gmail.com | 73.170.38.236 | listofevents | User Logged In
+DebugLog  | 2019-02-04 01:30:45 | ginojohn@gmail.com | 73.170.38.236 | listofevents | getEventList: select count(eventid) as cnt from events_t   where  deleted = 0 
+DebugLog  | 2019-02-04 01:30:45 | ginojohn@gmail.com | 73.170.38.236 | listofevents | getEventList: select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby from events_t  where  deleted = 0  order by fromdate,todate LIMIT 0, 10
+DebugLog  | 2019-02-04 01:31:00 | ginojohn@gmail.com | 73.170.38.236 | listofevents | User Logged In
+DebugLog  | 2019-02-04 01:31:00 | ginojohn@gmail.com | 73.170.38.236 | listofevents | getEventList: select count(eventid) as cnt from events_t   where  deleted = 0 
+DebugLog  | 2019-02-04 01:31:00 | ginojohn@gmail.com | 73.170.38.236 | listofevents | getEventList: select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby from events_t  where  deleted = 0  order by fromdate,todate LIMIT 10, 10
+DebugLog  | 2019-02-04 01:31:04 | ginojohn@gmail.com | 73.170.38.236 | listofevents | User Logged In
+DebugLog  | 2019-02-04 01:31:04 | ginojohn@gmail.com | 73.170.38.236 | listofevents | getEventList: select count(eventid) as cnt from events_t   where  deleted = 0 
+DebugLog  | 2019-02-04 01:31:04 | ginojohn@gmail.com | 73.170.38.236 | listofevents | getEventList: select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby from events_t  where  deleted = 0  order by fromdate,todate LIMIT 0, 10
+DebugLog  | 2019-02-04 01:31:16 | ginojohn@gmail.com | 73.170.38.236 | editevent | getEvent select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where eventid = 23
+DebugLog  | 2019-02-04 01:31:16 | ginojohn@gmail.com | 73.170.38.236 | editevent | User Logged In
+DebugLog  | 2019-02-04 01:32:16 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | isEventExists: select count(eventid) as cnt from events_t where deleted = 0 and eventid!= 23 and (( fromdate<='2019-02-10 00:00:00' and todate>='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( '2019-02-10 00:00:00' >= fromdate and '2019-02-10 00:00:00'<= todate ) or ( '2019-02-10 00:00:00' >= fromdate and '2019-02-10 00:00:00'<= todate )  )
+DebugLog  | 2019-02-04 01:32:16 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | updEvent update events_t set eventname='Feast of St. Ignatius & Holy Qurbono',eventdetails='7:30 AM - Morning Prayer
+8:00 AM - Holy Qurbono
+9:15 AM -  Sunday School
+Location: 
+St. Thomas Church, 1921 Las Palmas Ave, San Jose CA',highlights='Holy Qurbono',fromdate='2019-02-10 00:00:00',todate='2019-02-10 00:00:00',createdon='2019-02-04 01:32:16',createdby ='' where eventid = 23
+UserLog | 2019-02-04 01:32:16 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | Event Cover photo uploading ....11!!!/tmp/phpy14pWr
+UserLog | 2019-02-04 01:32:16 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | Event Cover photo uploading success!!!uploads/events/23.jpg
+DebugLog  | 2019-02-04 01:32:16 | ginojohn@gmail.com | 73.170.38.236 | editevent | getEvent select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where eventid = 23
+DebugLog  | 2019-02-04 01:32:16 | ginojohn@gmail.com | 73.170.38.236 | editevent | User Logged In
+DebugLog  | 2019-02-04 01:32:23 | ginojohn@gmail.com | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 01:32:23 | ginojohn@gmail.com | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 01:38:36 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | isEventExists: select count(eventid) as cnt from events_t where deleted = 0 and eventid!= 23 and (( fromdate<='2019-02-10 00:00:00' and todate>='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( '2019-02-10 00:00:00' >= fromdate and '2019-02-10 00:00:00'<= todate ) or ( '2019-02-10 00:00:00' >= fromdate and '2019-02-10 00:00:00'<= todate )  )
+DebugLog  | 2019-02-04 01:38:36 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | updEvent update events_t set eventname='Feast of St. Ignatius & Holy Qurbono',eventdetails='7:30 AM - Morning Prayer
+8:00 AM - Holy Qurbono
+9:15 AM -  Sunday School
+Location: 
+St. Thomas Church, 1921 Las Palmas Ave, San Jose CA',highlights='Holy Qurbono',fromdate='2019-02-10 00:00:00',todate='2019-02-10 00:00:00',createdon='2019-02-04 01:38:36',createdby ='' where eventid = 23
+UserLog | 2019-02-04 01:38:36 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | Event Cover photo uploading ....11!!!/tmp/phpdXVBEf
+UserLog | 2019-02-04 01:38:36 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | Event Cover photo uploading success!!!uploads/events/23.jpg
+DebugLog  | 2019-02-04 01:38:37 | ginojohn@gmail.com | 73.170.38.236 | editevent | getEvent select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where eventid = 23
+DebugLog  | 2019-02-04 01:38:37 | ginojohn@gmail.com | 73.170.38.236 | editevent | User Logged In
+DebugLog  | 2019-02-04 01:38:56 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | isEventExists: select count(eventid) as cnt from events_t where deleted = 0 and eventid!= 23 and (( fromdate<='2019-02-10 00:00:00' and todate>='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( '2019-02-10 00:00:00' >= fromdate and '2019-02-10 00:00:00'<= todate ) or ( '2019-02-10 00:00:00' >= fromdate and '2019-02-10 00:00:00'<= todate )  )
+DebugLog  | 2019-02-04 01:38:56 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | updEvent update events_t set eventname=' St. Ignatius Feast & Holy Qurbono',eventdetails='7:30 AM - Morning Prayer
+8:00 AM - Holy Qurbono
+9:15 AM -  Sunday School
+Location: 
+St. Thomas Church, 1921 Las Palmas Ave, San Jose CA',highlights='Holy Qurbono',fromdate='2019-02-10 00:00:00',todate='2019-02-10 00:00:00',createdon='2019-02-04 01:38:56',createdby ='' where eventid = 23
+DebugLog  | 2019-02-04 01:38:56 | ginojohn@gmail.com | 73.170.38.236 | editevent | getEvent select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where eventid = 23
+DebugLog  | 2019-02-04 01:38:56 | ginojohn@gmail.com | 73.170.38.236 | editevent | User Logged In
+DebugLog  | 2019-02-04 01:39:05 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | isEventExists: select count(eventid) as cnt from events_t where deleted = 0 and eventid!= 23 and (( fromdate<='2019-02-10 00:00:00' and todate>='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( '2019-02-10 00:00:00' >= fromdate and '2019-02-10 00:00:00'<= todate ) or ( '2019-02-10 00:00:00' >= fromdate and '2019-02-10 00:00:00'<= todate )  )
+DebugLog  | 2019-02-04 01:39:05 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | updEvent update events_t set eventname=' St. Ignatius Feast & Holy Qurbono',eventdetails='7:30 AM - Morning Prayer
+8:00 AM - Holy Qurbono
+9:15 AM -  Sunday School
+Location: 
+St. Thomas Church, 1921 Las Palmas Ave, San Jose CA',highlights='Holy Qurbono',fromdate='2019-02-10 00:00:00',todate='2019-02-10 00:00:00',createdon='2019-02-04 01:39:05',createdby ='' where eventid = 23
+UserLog | 2019-02-04 01:39:05 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | Event Cover photo uploading ....11!!!/tmp/phpGdMKY0
+UserLog | 2019-02-04 01:39:05 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | Event Cover photo uploading success!!!uploads/events/23.jpg
+DebugLog  | 2019-02-04 01:39:05 | ginojohn@gmail.com | 73.170.38.236 | editevent | getEvent select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where eventid = 23
+DebugLog  | 2019-02-04 01:39:05 | ginojohn@gmail.com | 73.170.38.236 | editevent | User Logged In
+DebugLog  | 2019-02-04 01:39:10 | ginojohn@gmail.com | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 01:39:10 | ginojohn@gmail.com | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 01:40:37 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | isEventExists: select count(eventid) as cnt from events_t where deleted = 0 and eventid!= 23 and (( fromdate<='2019-02-10 00:00:00' and todate>='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( '2019-02-10 00:00:00' >= fromdate and '2019-02-10 00:00:00'<= todate ) or ( '2019-02-10 00:00:00' >= fromdate and '2019-02-10 00:00:00'<= todate )  )
+DebugLog  | 2019-02-04 01:40:37 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | updEvent update events_t set eventname=' St. Ignatius Feast & Holy Qurbono',eventdetails='7:30 AM - Morning Prayer
+8:00 AM - Holy Qurbono
+9:15 AM -  Sunday School
+Location: 
+St. Thomas Church, 1921 Las Palmas Ave, San Jose CA',highlights='Holy Qurbono',fromdate='2019-02-10 00:00:00',todate='2019-02-10 00:00:00',createdon='2019-02-04 01:40:37',createdby ='' where eventid = 23
+UserLog | 2019-02-04 01:40:37 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | Event Cover photo uploading ....11!!!/tmp/phpqbdW3o
+UserLog | 2019-02-04 01:40:37 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | Event Cover photo uploading success!!!uploads/events/23.jpg
+DebugLog  | 2019-02-04 01:40:37 | ginojohn@gmail.com | 73.170.38.236 | editevent | getEvent select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where eventid = 23
+DebugLog  | 2019-02-04 01:40:37 | ginojohn@gmail.com | 73.170.38.236 | editevent | User Logged In
+DebugLog  | 2019-02-04 01:40:42 | ginojohn@gmail.com | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 01:40:42 | ginojohn@gmail.com | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 01:40:58 | ginojohn@gmail.com | 73.170.38.236 | listofevents | User Logged In
+DebugLog  | 2019-02-04 01:40:58 | ginojohn@gmail.com | 73.170.38.236 | listofevents | getEventList: select count(eventid) as cnt from events_t   where  deleted = 0 
+DebugLog  | 2019-02-04 01:40:58 | ginojohn@gmail.com | 73.170.38.236 | listofevents | getEventList: select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby from events_t  where  deleted = 0  order by fromdate,todate LIMIT 0, 10
+DebugLog  | 2019-02-04 01:41:04 | ginojohn@gmail.com | 73.170.38.236 | editevent | getEvent select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where eventid = 23
+DebugLog  | 2019-02-04 01:41:04 | ginojohn@gmail.com | 73.170.38.236 | editevent | User Logged In
+DebugLog  | 2019-02-04 01:41:12 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | isEventExists: select count(eventid) as cnt from events_t where deleted = 0 and eventid!= 23 and (( fromdate<='2019-02-10 00:00:00' and todate>='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( '2019-02-10 00:00:00' >= fromdate and '2019-02-10 00:00:00'<= todate ) or ( '2019-02-10 00:00:00' >= fromdate and '2019-02-10 00:00:00'<= todate )  )
+DebugLog  | 2019-02-04 01:41:12 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | updEvent update events_t set eventname=' St. Ignatius Feast & Holy Qurbono',eventdetails='7:30 AM - Morning Prayer
+8:00 AM - Holy Qurbono
+9:15 AM -  Sunday School
+Location: 
+St. Thomas Church, 1921 Las Palmas Ave, San Jose CA',highlights='Holy Qurbono',fromdate='2019-02-10 00:00:00',todate='2019-02-10 00:00:00',createdon='2019-02-04 01:41:12',createdby ='' where eventid = 23
+UserLog | 2019-02-04 01:41:12 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | Event Cover photo uploading ....11!!!/tmp/phpnuG9vb
+UserLog | 2019-02-04 01:41:12 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | Event Cover photo uploading success!!!uploads/events/23.jpg
+DebugLog  | 2019-02-04 01:41:12 | ginojohn@gmail.com | 73.170.38.236 | editevent | getEvent select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where eventid = 23
+DebugLog  | 2019-02-04 01:41:12 | ginojohn@gmail.com | 73.170.38.236 | editevent | User Logged In
+DebugLog  | 2019-02-04 01:41:32 | ginojohn@gmail.com | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 01:41:32 | ginojohn@gmail.com | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 01:43:32 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | isEventExists: select count(eventid) as cnt from events_t where deleted = 0 and eventid!= 23 and (( fromdate<='2019-02-10 00:00:00' and todate>='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( '2019-02-10 00:00:00' >= fromdate and '2019-02-10 00:00:00'<= todate ) or ( '2019-02-10 00:00:00' >= fromdate and '2019-02-10 00:00:00'<= todate )  )
+DebugLog  | 2019-02-04 01:43:32 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | updEvent update events_t set eventname=' St. Ignatius Feast & Holy Qurbono',eventdetails='7:30 AM - Morning Prayer
+8:00 AM - Holy Qurbono
+9:15 AM -  Sunday School
+Location: 
+St. Thomas Church, 1921 Las Palmas Ave, San Jose CA',highlights='Holy Qurbono',fromdate='2019-02-10 00:00:00',todate='2019-02-10 00:00:00',createdon='2019-02-04 01:43:32',createdby ='' where eventid = 23
+UserLog | 2019-02-04 01:43:32 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | Event Cover photo uploading ....11!!!/tmp/phpa92IGL
+UserLog | 2019-02-04 01:43:32 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | Event Cover photo uploading success!!!uploads/events/23.jpg
+DebugLog  | 2019-02-04 01:43:32 | ginojohn@gmail.com | 73.170.38.236 | editevent | getEvent select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where eventid = 23
+DebugLog  | 2019-02-04 01:43:32 | ginojohn@gmail.com | 73.170.38.236 | editevent | User Logged In
+DebugLog  | 2019-02-04 01:43:36 | ginojohn@gmail.com | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 01:43:36 | ginojohn@gmail.com | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 01:43:37 | guest | 66.249.73.1 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 01:43:37 | guest | 66.249.73.1 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 01:49:39 | ginojohn@gmail.com | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 01:49:39 | ginojohn@gmail.com | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 01:53:43 | guest | 76.127.94.224 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 01:53:43 | guest | 76.127.94.224 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 01:55:10 | guest | 76.127.94.224 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 01:55:10 | guest | 76.127.94.224 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 01:57:43 | ginojohn@gmail.com | 73.170.38.236 | logout | removeLoginActivity: delete  from admin_loginactivity where userid='ginojohn@gmail.com' and sessionid='85f7df0426db1521fd80e1640357497c'
+UserLog | 2019-02-04 01:57:43 | ginojohn@gmail.com | 73.170.38.236 | logout | User Logged Out!!!
+DebugLog  | 2019-02-04 01:57:46 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 01:57:46 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 02:01:55 | guest | 66.249.73.3 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 02:01:55 | guest | 66.249.73.3 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 02:06:30 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 02:06:30 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 02:09:37 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 02:09:37 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 02:10:43 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 02:10:43 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 02:16:27 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 02:16:27 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 02:16:41 | guest | 24.6.79.223 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 02:16:41 | guest | 24.6.79.223 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 02:22:20 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 02:22:20 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 02:26:04 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 02:26:04 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 02:27:43 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 02:27:43 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 02:28:44 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 02:28:44 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 02:29:37 | guest | 73.170.38.236 | calendar | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 1
+DebugLog  | 2019-02-04 02:53:18 | guest | 106.120.173.65 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 02:53:18 | guest | 106.120.173.65 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 02:57:09 | guest | 66.249.65.69 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 02:57:09 | guest | 66.249.65.69 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 03:40:32 | guest | 24.6.79.223 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 03:40:32 | guest | 24.6.79.223 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 03:40:37 | guest | 24.6.79.223 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 03:40:37 | guest | 24.6.79.223 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 03:43:25 | guest | 24.6.79.223 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 03:43:25 | guest | 24.6.79.223 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 04:10:04 | guest | 172.10.162.122 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 04:10:04 | guest | 172.10.162.122 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 04:33:12 | guest | 24.6.79.223 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 04:33:12 | guest | 24.6.79.223 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 05:30:36 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 05:30:36 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 05:49:31 | guest | 73.15.188.41 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 05:49:31 | guest | 73.15.188.41 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 05:53:49 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 05:53:49 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 05:59:47 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 05:59:47 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 06:05:30 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 06:05:30 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 06:09:22 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 06:09:22 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 06:16:01 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 06:16:01 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 06:17:16 | guest | 180.76.15.21 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 06:17:16 | guest | 180.76.15.21 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 06:19:03 | guest | 198.199.111.11 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 06:19:04 | guest | 198.199.111.11 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 06:19:04 | guest | 198.199.118.24 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 06:19:04 | guest | 198.199.118.24 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 06:19:04 | guest | 66.102.8.169 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 06:19:04 | guest | 66.102.8.169 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 06:19:04 | guest | 66.102.8.171 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 06:19:04 | guest | 66.102.8.171 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 06:19:05 | guest | 104.236.158.24 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 06:19:05 | guest | 104.236.158.24 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 06:19:10 | guest | 104.236.158.24 | calendar | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 1
+DebugLog  | 2019-02-04 06:22:03 | guest | 162.243.154.141 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 06:22:03 | guest | 162.243.154.141 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 06:30:49 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 06:30:49 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 06:35:17 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 06:35:17 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 06:35:24 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 06:35:24 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 06:36:54 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 06:36:54 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 06:39:18 | guest | 107.170.221.233 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 06:39:18 | guest | 107.170.221.233 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 06:42:50 | guest | 66.102.6.143 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 06:42:50 | guest | 66.102.6.143 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 06:43:10 | guest | 66.102.7.165 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 06:43:10 | guest | 66.102.7.165 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 06:50:33 | guest | 180.76.15.153 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 06:50:33 | guest | 180.76.15.153 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 06:54:40 | guest | 66.102.7.163 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 06:54:40 | guest | 66.102.7.163 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 08:37:58 | guest | 73.15.188.41 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 08:37:58 | guest | 73.15.188.41 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 08:38:09 | guest | 73.15.188.41 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 08:38:09 | guest | 73.15.188.41 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 08:38:20 | guest | 73.15.188.41 | calendar | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 1
+DebugLog  | 2019-02-04 08:51:52 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 08:51:52 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 08:52:04 | guest | 73.170.38.236 | calendar | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 1
+DebugLog  | 2019-02-04 08:52:32 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 08:52:32 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 08:52:34 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 08:52:34 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 09:51:49 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 09:51:49 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 09:54:42 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 09:54:42 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 09:59:21 | guest | 73.170.38.236 | login_action | adminAuthenticate: select a.uid,a.userid,a.username,a.firstname,a.lastname,a.passwd,a.saltkey,a.sessionid, a.activated,a.activationdata,a.activatedon,a.photopath  from admin_user_details_t a  where a.userid ='ginojohn@gmail.com'  limit 1
+DebugLog  | 2019-02-04 09:59:21 | guest | 73.170.38.236 | login_action | got data...pOO66Zqpp2s=
+DebugLog  | 2019-02-04 09:59:21 | guest | 73.170.38.236 | login_action | encrypted pass true
+DebugLog  | 2019-02-04 09:59:21 | guest | 73.170.38.236 | login_action | Authenticate ====1
+DebugLog  | 2019-02-04 09:59:21 | guest | 73.170.38.236 | login_action | removeAllLoginActivity: delete  from admin_loginactivity where userid='ginojohn@gmail.com'
+DebugLog  | 2019-02-04 09:59:21 | guest | 73.170.38.236 | login_action | addLoginActivity: insert into admin_loginactivity(userid,logintime,lastupdate,ipaddress,hashkey,sessionid)values('ginojohn@gmail.com','2019-02-04 09:59:21','2019-02-04 09:59:21','73.170.38.236','c4c07b88493f8da84802bcd2a7de351a','85f7df0426db1521fd80e1640357497c')
+DebugLog  | 2019-02-04 09:59:21 | ginojohn@gmail.com | 73.170.38.236 | login_action | aaaaaaaaaaaa
+DebugLog  | 2019-02-04 09:59:21 | ginojohn@gmail.com | 73.170.38.236 | dashboard | User Logged In
+DebugLog  | 2019-02-04 09:59:21 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getTotalRegSummary: select count(a.uid) as cnt from userregistration_t a where a.deleted = 0 
+DebugLog  | 2019-02-04 09:59:21 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getThisMonthRegSummary: select count(a.uid) as cnt from userregistration_t a where month(a.createdon) = '02' and year(a.createdon) = '2019' and a.deleted = 0 
+DebugLog  | 2019-02-04 09:59:21 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getTodaysRegSummary: select count(a.uid) as cnt from userregistration_t a where  day(a.createdon)='04' and month(a.createdon)='02' and year(a.createdon)='2019' and a.deleted = 0 
+DebugLog  | 2019-02-04 09:59:21 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getTotalMesgSummary: select count(a.touid) as cnt from messages_t a where toaddress='churchteam'
+DebugLog  | 2019-02-04 09:59:21 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getThisMonthMesgSummary: select count(a.touid) as cnt from messages_t a where month(a.createdon) = '02' and year(a.createdon) = '2019' and toaddress='churchteam'
+DebugLog  | 2019-02-04 09:59:21 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getTodaysMesgSummary: select count(a.touid) as cnt from messages_t a where  day(a.createdon)='04' and month(a.createdon)='02' and year(a.createdon)='2019' and toaddress='churchteam'
+DebugLog  | 2019-02-04 09:59:21 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getTotalEvntSummary: select count(a.eventid) as cnt from events_t a where deleted = 0
+DebugLog  | 2019-02-04 09:59:21 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getThisMonthEvntSummary: select count(a.eventid) as cnt from events_t a where deleted = 0 and  month(a.fromdate) = '02' and year(a.fromdate) = '2019'
+DebugLog  | 2019-02-04 09:59:21 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getTodaysEvntSummary: select count(a.eventid) as cnt from events_t a where deleted = 0 and day(a.fromdate)='04' and month(a.fromdate)='02' and year(a.fromdate)='2019'
+DebugLog  | 2019-02-04 09:59:21 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getLatestRegUsers: select b.uid ,b.userid ,b.name ,b.familyname,b.gender ,b.dob ,b.maritalstatus,b.spousename,b.qualification ,b.fulladdress ,
+							b.zipcode ,b.city ,b.state ,b.mobilenumber ,b.phonenumber ,b.email ,b.photopath ,
+							b.aboutme ,b.aboutfamily ,b.completedstage ,b.lastlogintime ,b.deleted ,b.createdon ,b.createdby  from useraccount_t a,userregistration_t b  where  a.uid=b.uid and b.deleted=0  order by b.createdon desc limit 5
+UserLog | 2019-02-04 09:59:21 | ginojohn@gmail.com | 73.170.38.236 | dashboard | Query : select a.messageid,a.fromuid,a.fromaddress,a.touid,a.toaddress,a.subject,a.message,a.createdon,a.status,a.tag,b.uid,b.name  from  messages_t a, userregistration_t b where a.fromuid=b.uid  and a.toaddress = 'churchteam' order by a.createdon desc  LIMIT 0, 5
+DebugLog  | 2019-02-04 09:59:21 | ginojohn@gmail.com | 73.170.38.236 | dashboard | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 5
+DebugLog  | 2019-02-04 09:59:26 | ginojohn@gmail.com | 73.170.38.236 | listofevents | User Logged In
+DebugLog  | 2019-02-04 09:59:26 | ginojohn@gmail.com | 73.170.38.236 | listofevents | getEventList: select count(eventid) as cnt from events_t   where  deleted = 0 
+DebugLog  | 2019-02-04 09:59:26 | ginojohn@gmail.com | 73.170.38.236 | listofevents | getEventList: select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby from events_t  where  deleted = 0  order by fromdate,todate LIMIT 0, 10
+DebugLog  | 2019-02-04 09:59:30 | ginojohn@gmail.com | 73.170.38.236 | editevent | getEvent select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where eventid = 23
+DebugLog  | 2019-02-04 09:59:30 | ginojohn@gmail.com | 73.170.38.236 | editevent | User Logged In
+DebugLog  | 2019-02-04 10:00:30 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | isEventExists: select count(eventid) as cnt from events_t where deleted = 0 and eventid!= 23 and (( fromdate<='2019-02-10 00:00:00' and todate>='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( '2019-02-10 00:00:00' >= fromdate and '2019-02-10 00:00:00'<= todate ) or ( '2019-02-10 00:00:00' >= fromdate and '2019-02-10 00:00:00'<= todate )  )
+DebugLog  | 2019-02-04 10:00:30 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | updEvent update events_t set eventname=' St. Ignatius Feast & Holy Qurbono',eventdetails='7:30 AM - Morning Prayer
+8:00 AM - Holy Qurbono
+9:15 AM -  Sunday School
+Location: 
+St. Thomas Church, 1921 Las Palmas Ave, San Jose CA',highlights='Holy Qurbono',fromdate='2019-02-10 00:00:00',todate='2019-02-10 00:00:00',createdon='2019-02-04 10:00:30',createdby ='' where eventid = 23
+UserLog | 2019-02-04 10:00:30 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | Event Cover photo uploading ....11!!!/tmp/phpjcQmLf
+UserLog | 2019-02-04 10:00:30 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | Event Cover photo uploading success!!!uploads/events/23.jpg
+DebugLog  | 2019-02-04 10:00:30 | ginojohn@gmail.com | 73.170.38.236 | editevent | getEvent select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where eventid = 23
+DebugLog  | 2019-02-04 10:00:30 | ginojohn@gmail.com | 73.170.38.236 | editevent | User Logged In
+DebugLog  | 2019-02-04 10:01:31 | ginojohn@gmail.com | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 10:01:31 | ginojohn@gmail.com | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 10:02:14 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | isEventExists: select count(eventid) as cnt from events_t where deleted = 0 and eventid!= 23 and (( fromdate<='2019-02-10 00:00:00' and todate>='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( fromdate>='2019-02-10 00:00:00' and todate<='2019-02-10 00:00:00') or ( '2019-02-10 00:00:00' >= fromdate and '2019-02-10 00:00:00'<= todate ) or ( '2019-02-10 00:00:00' >= fromdate and '2019-02-10 00:00:00'<= todate )  )
+DebugLog  | 2019-02-04 10:02:14 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | updEvent update events_t set eventname=' St. Ignatius Feast & Holy Qurbono',eventdetails='7:30 AM - Morning Prayer
+8:00 AM - Holy Qurbono
+9:15 AM -  Sunday School
+Location: 
+St. Thomas Church, 1921 Las Palmas Ave, San Jose CA',highlights='Holy Qurbono',fromdate='2019-02-10 00:00:00',todate='2019-02-10 00:00:00',createdon='2019-02-04 10:02:14',createdby ='' where eventid = 23
+UserLog | 2019-02-04 10:02:14 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | Event Cover photo uploading ....11!!!/tmp/phprFv70o
+UserLog | 2019-02-04 10:02:14 | ginojohn@gmail.com | 73.170.38.236 | updevent_action | Event Cover photo uploading success!!!uploads/events/23.jpg
+DebugLog  | 2019-02-04 10:02:14 | ginojohn@gmail.com | 73.170.38.236 | editevent | getEvent select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where eventid = 23
+DebugLog  | 2019-02-04 10:02:14 | ginojohn@gmail.com | 73.170.38.236 | editevent | User Logged In
+DebugLog  | 2019-02-04 10:02:20 | ginojohn@gmail.com | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 10:02:20 | ginojohn@gmail.com | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 10:56:45 | guest | 66.249.73.1 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 10:56:45 | guest | 66.249.73.1 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 11:20:17 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 11:20:17 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 11:30:42 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 11:30:42 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 11:31:10 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 11:31:10 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 11:31:24 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 11:31:24 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 11:38:40 | guest | 73.170.38.236 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 11:38:40 | guest | 73.170.38.236 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 11:47:21 | guest | 66.249.65.67 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 11:47:21 | guest | 66.249.65.67 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 12:44:07 | guest | 66.249.73.141 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 12:44:07 | guest | 66.249.73.141 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 13:45:27 | guest | 73.15.67.99 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 13:45:27 | guest | 73.15.67.99 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 15:49:32 | guest | 66.249.73.3 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 15:49:32 | guest | 66.249.73.3 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 17:25:19 | guest | 188.92.74.189 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 17:25:19 | guest | 188.92.74.189 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 18:05:24 | guest | 66.249.65.67 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 18:05:24 | guest | 66.249.65.67 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 19:26:21 | guest | 66.249.73.1 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 19:26:21 | guest | 66.249.73.1 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 23:05:52 | guest | 98.116.205.148 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 23:05:52 | guest | 98.116.205.148 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 23:06:02 | guest | 98.116.205.148 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 23:06:02 | guest | 98.116.205.148 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 23:08:04 | guest | 98.116.205.148 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 23:08:04 | guest | 98.116.205.148 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3
+DebugLog  | 2019-02-04 23:25:29 | guest | 66.249.73.77 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
+DebugLog  | 2019-02-04 23:25:29 | guest | 66.249.73.77 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-04' order by fromdate asc ,todate asc limit 3

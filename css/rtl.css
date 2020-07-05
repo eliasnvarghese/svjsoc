@@ -1,0 +1,189 @@
+body {
+    direction: rtl;
+}
+
+.topbar p i {
+    margin-left: 5px;
+    margin-right: 0;
+}
+.featured-sermon span i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.category-block > span i {
+    margin-right: 0;
+    margin-left: 5px;
+}
+.owl-carousel {
+    direction: ltr;
+}
+.owl-item {
+    direction: rtl;
+}
+.category-img ul li a i {
+    float: left;
+    line-height: 33px;
+}
+.product-bottom > a i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+.pastors-detail h6 i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+.widget-blog-img {
+    float: right;
+    margin-right: 0;
+    margin-left: 10px;
+}
+.widget-blog > span {
+    float: right;
+}
+.widget-blog > span i {
+    margin-right: 0;
+    margin-left: 5px;
+}
+.contact li i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+.blog-detail > span {
+    float: right;
+}
+.blog-detail > span i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+.toggle-item h2 i {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.tab-style .nav li {
+    float: right;
+    margin-right: 0;
+}
+.comment-widget span i {
+    margin-left: 10px;
+    margin-right: 0;
+}
+ul li i {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+.widget li a span {
+    float: left;
+}
+.widget-blog > span {
+    float: right;
+}
+.widget-blog > span i {
+    margin-left: 5px;
+    margin-right: 0;
+}
+.quick-help > span {
+    float: right;
+    margin-left: 10px;
+    margin-right: 0;
+}
+.single-page h2{
+	float: right;
+}
+.comments > ul li h5 i {
+    float: left;
+}
+.team-list > li {
+    padding-left: 0;
+    padding-right: 30px;
+}
+.order > li{
+	text-align: center;
+}
+.checkout-content p input[type="radio"] {
+    float: right;
+}
+.checkout-block label {
+    float: right;
+    margin-left: 0;
+    margin-right: 10px;
+}
+.thanks-message > span {
+    right: 30px;
+}
+.thanks-message h5,.thanks-message p {
+    float: right;
+    margin-left: 0;
+    margin-right: 30px;
+}
+.thanks-message {
+    padding: 35px 120px 50px 20px;
+}
+.event-date {
+    float: right;
+    margin-left: 35px;
+    margin-right: 0;
+}
+.news-details span i {
+    float: right;
+    margin-right: 0;
+    margin-left: 10px;
+}
+.blog-list img {
+    float: right;
+    margin-right: 0;
+    margin-left: 20px;
+}
+.blog-list > ul li {
+    float: right;
+}
+.blog-listing > a {
+    left: 30px;
+    right: auto;
+
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    -ms-transform:rotate(180deg);
+    -o-transform:rotate(180deg);
+    transform:rotate(180deg);
+}
+.blog-listing:hover > a {
+    left: 0;
+    right: auto;
+}
+.upcoming-event span {
+    float: right;
+}
+.upcoming-event span i {
+    float: right;
+    margin-right: 0;
+    margin-left: 15px;
+}
+.prayer-request input[type="text"] {
+    float: right;
+}
+.prayer-request input[type="submit"] {
+    float: left;
+}
+
+.minict_wrapper:after {
+    right: auto;
+    left: 0;
+}
+.downcount ul {
+    float: left;
+}
+.downcount i {
+    padding: 20px 20px 20px 0;
+}
+.pastors-message p {
+    padding-right: 50px;
+}
+footer .widget-title > h4 {
+    float: right;
+}
+footer .widget-title > h4:before {
+    left: auto;
+    right: 0;
+}
