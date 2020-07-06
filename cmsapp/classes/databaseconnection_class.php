@@ -35,6 +35,15 @@ class DatabaseConnection
 		
 	}
 
+	function setLocalConnection(){
+	
+		$this->db_host="localhost";
+		$this->db_user="root";
+		$this->db_password="";
+		$this->db="ststephendb";
+		
+	}
+
 	function db_open()
 	{
 		try{

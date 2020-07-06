@@ -1,4 +1,0 @@
-DebugLog  | 2019-02-26 16:20:49 | guest | 66.249.66.50 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
-DebugLog  | 2019-02-26 16:20:49 | guest | 66.249.66.50 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-26' order by fromdate asc ,todate asc limit 3
-DebugLog  | 2019-02-26 23:29:05 | guest | 104.192.74.196 | index | getGospel: select * from gospel_t where deleted = 0 order by rand() limit 1
-DebugLog  | 2019-02-26 23:29:05 | guest | 104.192.74.196 | index | getUpComingEvents select eventid,eventname,eventdetails,highlights,fromdate,todate,deleted,createdon,createdby  from events_t  where deleted=0 and todate>='2019-02-26' order by fromdate asc ,todate asc limit 3

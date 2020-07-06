@@ -1,6 +1,7 @@
 <?php
 function __autoload($className){
 	$className=strtolower($className);
+	print $className;
 	require_once "./cmsapp/classes/{$className}_class.php";
 }
 require_once('./cmsapp/includes/utility.php'); 
